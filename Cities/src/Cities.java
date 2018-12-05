@@ -11,8 +11,7 @@ public class Cities
             "Ufa", "Volgograd", "Yakutsk", "Zvenigorod"
     };
 
-    public static void main(String[] args) throws IOException
-    {
+    public static void main(String[] args) throws IOException, InterruptedException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         String previousCity = "";
         for(;;)
@@ -39,6 +38,9 @@ public class Cities
             catch (StringIndexOutOfBoundsException e)
             {
                 System.out.println("Empty input!");
+            }
+            finally {
+                System.out.println();
             }
         }
     }
